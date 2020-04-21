@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    {% load crispy_forms_tags %}
+    <title>Login to your NTM Fitness Club account</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/assets/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'core/assets/css/superstyle.css' %}">
+
+    <style>
+        #logo {
+            font-size: 2.5em;
+            font-family: "Poppins";
+            font-size: 2em;
+            font-weight: bolder;
+            color: #000;
+            margin: auto;
+        }
+
+        #logo em {
+            font-style: normal;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            color: #ed563b;
+        }
+
+        @media (max-width: 767px) {
+            #logo {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--header START-->
+    <div class="container">
+        <div class="jumbotron">
+            <a href="{% url 'core:index'%}" class="logo" id="logo">NTM<em>FITNESS CLUB</em></a>
+            <h3>Log in to your account</h3>
+            <p><a href="{% url 'accounts:signup' %}"><small>Don't have an account? Sign up now</small></a> | <a
+                    href="{% url 'blog:blog_list' %}"><small>Check out the Blog</small></a></p>
+        </div>
+    </div>
+    <!--header END-->
+
+    <section class="container text-center">
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; NTM Fitness Club
+
+                        - Designed and developed by <a rel="nofollow" href="#" class="tm-text-link" target="_parent">lytyear
+                            softworks</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    {% load crispy_forms_tags %}
+    <title>Join NTM Fitness Club</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/assets/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'core/blog/signup.css' %}">
+    <script defer src="{% static 'core/assets/js/jquery-2.1.0.min.js' %}"></script>
+    <script defer src="{% static 'core/assets/js/bootstrap.min.js' %}"></script>
+
+
+    <style>
+        #logo {
+            font-size: 2.5em;
+            font-family: "Poppins";
+            font-size: 2em;
+            font-weight: bolder;
+            color: #000;
+            margin: auto;
+        }
+
+        #logo em {
+            font-style: normal;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            color: #ed563b;
+        }
+
+        @media (max-width: 767px) {
+            #logo {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--header START-->
+    <div class="container">
+        <div class="jumbotron">
+            <a href="{% url 'core:index'%}" class="logo" id="logo">NTM<em>FITNESS CLUB</em></a>
+            <h3>Sign up on our blog</h3>
+            <p><small>By filling in the form, you accepting our <button class="btn btn-outline-danger btn-sm"
+                        data-toggle="modal" data-target="#termsModalScrollable">terms and conditions.</button></small>
+            </p>
+            <p><a href="{% url 'login' %}"><small>Already have an account? Log in</small></a> | <a
+                    href="{% url 'blog:blog_list' %}"><small>Check out the Blog</small></a></p>
+
+        </div>
+    </div>
+    <!--header END-->
+
+    <section class="container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <!-- Terms Modal START-->
+    <!-- Modal -->
+    <div class="modal fade" id="termsModalScrollable" tabindex="-1" role="dialog"
+        aria-labelledby="termsModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalScrollableTitle">Terms & Conditions Agreement</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>Membership Agreement</h4>
+                    <h5>- "NTM" means NTM Fitness Club</h5>
+                    <hr class="my-2">
+                    <ol>
+                        <li>
+                            <p>Membership of the club shall be only for the signed member and may not be transferred or
+                                assigned to any third party whatsoever except on legal grounds.</p>
+                        </li>
+                        <li>
+                            <p>NTM shall be entitled to make improvements to the club and members shall have no claim
+                                whatsoever and howsoever arising against NTM as a result thereof.</p>
+                        </li>
+                        <li>
+                            <p>NTM shall be entitled to deny the member access to train in the event of the member
+                                failing to pay his/her monthly tag fee.</p>
+                        </li>
+                        <li>
+                            <p>Members shall bring their own water bottle and towel.</p>
+                        </li>
+                        <li>
+                            <p>NTM sessions take place from Monday to Friday mornings and afternoons but time differs
+                                upon selected classes.</p>
+                        </li>
+                        <li>
+                            <p>Extra classes are not included on the monthly tag fee and private sessions vary from
+                                distance, number of clients, and duration of the session.</p>
+                        </li>
+                        <li>
+                            <p>Members shall pay the monthly tag fee regardless of the member not coming to train as
+                                long as the contract has not been cancelled.</p>
+                        </li>
+                        <li>
+                            <p>Members shall respect other members and shall not bad mouth or harass any form or way.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Members shall not judge other members based on the way they look, dress, body shape etc.
+                            </p>
+                        </li>
+                        <li>
+                            <p></p>
+                        </li>
+                    </ol>
+                    <hr class="my-2">
+                    <h4>Termination of Membership Agreement</h4>
+                    <p>The cancellation of this agreement must be solely the main member of the signed agreement to
+                        proceed with the termination. Members terminating the agreement must acknowledge that they will
+                        have to pay for that month the termination is made thereof.</p>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Terms Modal END-->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; NTM Fitness Club
+
+                        - Designed and developed by <a rel="nofollow" href="#" class="tm-text-link"
+                            target="_parent">lytyear
+                            softworks</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

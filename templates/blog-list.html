@@ -1,0 +1,51 @@
+{% extends 'blog-base.html'%}
+{% load static %}
+{% block main_content %}
+<!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner" id="top">
+    <video autoplay muted loop id="bg-video">
+
+    </video>
+
+    <div class="video-overlay header-text">
+        <div class="caption">
+            {% if user.is_authenticated %}
+            <h5>Welcome to the blog {{ user.username }}</h5>
+            <a href="{% url 'logout'%}">logout</a>
+            <div class="main-button scroll-to-section">
+                <a href="#blog-list">Explore posts</a>
+            </div>
+            {% else %}
+            <!--h2>with the team in our <em>"blog"</em></h2 -->
+            <h3>You are not signed in</h3>
+            <p><a href="{% url 'login' %}">login</a> |
+                <a href="{% url 'accounts:signup' %}">signup</a></p>
+
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- ***** Main Banner Area End ***** -->
+
+<div class="container">
+    <section class="section" id="blog-list">
+        {% for post in object_list %}
+        <div class="row">
+            <div class="card text-center shadow-lg p-3 mt-5 mb-1 bg-white " style="width: 80rem;">
+                <img src="{% static 'core/assets/images/training-image-01.jpg' %}" class="card-img-top"
+                    alt="First Class">
+                <div class="card-body">
+                    <h4 class="card-title">{{post.title }}</h4>
+                    <h6 class="card-subtitle text-muted">{{post.date_posted}}</h6>
+                    <p class="card-text">{{ post.body }}</p>
+                    <a href="{% url 'blog:blog_detail' post.pk %}" class="btn btn-danger">Read more</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </section>
+</div>
+
+
+{% endblock main_content %}

@@ -1,0 +1,367 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_content %}
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <video autoplay muted loop id="bg-video">
+            <source src="core/assets/images/gym-video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h6>work harder, get stronger</h6>
+                <h2>easy with our <em>gym</em></h2>
+                <div class="main-button scroll-to-section">
+                    <a href="#features">Become a member</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Features Item Start ***** -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Choose <em>Program</em></h2>
+                        <img src=" {% static 'core/assets/images/line-dec.png' %}" alt="waves">
+                        <p>NTM Fitness Club has a wide variety of training options, whether you're a fit sportsperson or you're just starting out your fitness training. We have what you need.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="features-items">
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src=" {% static 'core/assets/images/features-first-icon.png' %}" alt="First One">
+                            </div>
+                            <div class="right-content">
+                                <h4>Basic Fitness</h4>
+                                <p>This type of level is tailor made for individuals who are beginning their fitness journey. No matter your body size or type, you always start by taking small steps.</p>
+                                <a href="{% url 'accounts:signup'%}" class="text-button">Discover More</a>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src=" {% static 'core/assets/images/features-first-icon.png' %}" alt="second one">
+                            </div>
+                            <div class="right-content">
+                                <h4>Core Fitness</h4>
+                                <p>Members who have already started their fitness journey will be happy to see that we provide a way for them to keep progressing and stay healthy.</p>
+                                <a href="{% url 'accounts:signup'%}" class="text-button">Discover More</a>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src=" {% static 'core/assets/images/features-first-icon.png' %}" alt="third gym training">
+                            </div>
+                            <div class="right-content">
+                                <h4>Basic Muscle Course</h4>
+                                <p>We provide an intense training program that will help individuals build their muscles and see the results in a matter of weeks.</p>
+                                <a href="{% url 'accounts:signup'%}" class="text-button">Discover More</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="features-items">
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{% static 'core/assets/images/features-first-icon.png' %}" alt="fourth muscle">
+                            </div>
+                            <div class="right-content">
+                                <h4>Advanced Muscle Course</h4>
+                                <p>This highly intense course is not for the faint-hearted. It's a rigorous muscle course that will keep you up to shape in every aspect.</p>
+                                <a href="{% url 'accounts:signup'%}" class="text-button">Discover More</a>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{% static 'core/assets/images/features-first-icon.png' %}" alt="training fifth">
+                            </div>
+                            <div class="right-content">
+                                <h4>Personal Training</h4>
+                                <p>NTM Fitness Club understands that sometimes you want to engage in a space were you are comfortable. So we offer you the help you seek with our 1 on 1 sessions.</p>
+                                <a href="{% url 'accounts:signup'%}" class="text-button">Discover More</a>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="{% static 'core/assets/images/features-first-icon.png' %}" alt="gym training">
+                            </div>
+                            <div class="right-content">
+                                <h4>Team Workout</h4>
+                                <p>Doing something together often brings greater results. As such we provide a course where you train with other fellow members and work towards a single goal.</p>
+                                <a href="{% url 'accounts:signup'%}" class="text-button">Discover More</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Item End ***** -->
+
+    <!-- ***** Call to Action Start ***** -->
+    <section class="section" id="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <h2>Don’t <em>think</em>, begin <em>today</em>!</h2>
+                        <p>A goal is a motivator, a pusher, a dream, a winning. Our goal oriented training will not only keep you fit, but also build your confidence and your empowerment.</p>
+                        <div class="main-button scroll-to-section">
+                            <a href="{% url 'accounts:signup'%}">Become a member</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Call to Action End ***** -->
+
+    <!-- ***** Our Classes Start ***** -->
+    <section class="section" id="our-classes">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Our <em>Classes</em></h2>
+                        <img src=" {% static 'core/assets/images/line-dec.png' %}" alt="">
+                        <p>NTM Fitness Club thinks of every aspect of the human's fitness. That's why we offer classes that are geared towards different things.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="tabs">
+              <div class="col-lg-4">
+                <ul>
+                  <li><a href='#tabs-1'><img src="{% static 'core/assets/images/tabs-first-icon.png' %}" alt="">Goal Oriented Class</a></li>
+                  <li><a href='#tabs-2'><img src="{% static 'core/assets/images/tabs-first-icon.png' %}" alt="">Stamina Based Class</a></a></li>
+                  <li><a href='#tabs-3'><img src="{% static 'core/assets/images/tabs-first-icon.png' %}" alt="">Time Based Class</a></a></li>
+                  <li><a href='#tabs-4'><img src="{% static 'core/assets/images/tabs-first-icon.png' %}" alt="">Overall Fitness Class</a></a></li>
+                  <div class="main-rounded-button"><a href="#">View All Schedules</a></div>
+                </ul>
+              </div>
+              <div class="col-lg-8">
+                <section class='tabs-content'>
+                  <article id='tabs-1'>
+                    <img src="{% static 'core/assets/images/training-image-01.jpg' %}" alt="First Class">
+                    <h4>Goal Oriented Class</h4>
+                    <p>A goal allows a client to build self-confidence, self-power and self-control in what he/she wants to achieve. It's a reminder that sets a tone of accomplishment in the trainer's mind. This class is for those who dare to meet that lofy goal.</p>
+                    <div class="main-button">
+                        <a href="#">View Schedule</a>
+                    </div>
+                  </article>
+                  <article id='tabs-2'>
+                    <img src="{% static 'core/assets/images/training-image-02.jpg'%}" alt="Second Training">
+                    <h4>Stamina based Class</h4>
+                    <p>Are you the person who constantly needs to perform tasks that require a deep amount of breathing? Are you an athlete, a swimmer or a participant of a marathon? Then this class is for people like you, people who want to increase theeir stamina and performance. Join now and get the boost you have been seeking.</p>
+                    <div class="main-button">
+                        <a href="#">View Schedule</a>
+                    </div>
+                  </article>
+                  <article id='tabs-3'>
+                    <img src="{% static 'core/assets/images/training-image-03.jpg'%}" alt="Third Class">
+                    <h4>Time Based Class</h4>
+                    <p>Timing is everything and it's the key to succeding in almost anything in life. So we at NTM understand that you might be a person with a crazy schedule that does not offer you the flexibility to attend our awesome courses. But this one is for you, you make the schedule flexible in whatever manner that makes sense to you.</p>
+                    <div class="main-button scroll-to-section">
+                        <a href="#schedule">View Schedule</a>
+                    </div>
+                  </article>
+                  <article id='tabs-4'>
+                    <img src="{% static 'core/assets/images/training-image-04.jpg'%}" alt="Fourth Training">
+                    <h4>Overall Fitness Class</h4>
+                    <p>This class is level based. Meaning that it is the standard class that most novice trainees usually signup for. It focuses on many aspects of the body and engages the member with no just physical fitness but psychological and emotional as well. Making the trainee health conscious in every way.</p>
+                    <div class="main-button scroll-to-section">
+                        <a href="#schedule">View Schedule</a>
+                    </div>
+                  </article>
+                </section>
+              </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Our Classes End ***** -->
+    
+    <section class="section" id="schedule">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading dark-bg">
+                        <h2>Classes <em>Schedule</em></h2>
+                        <img src="assets/images/line-dec.png" alt="">
+                        <p>This schedule is subject to change, so signup for the blog to get regular updates on important information such as schedules and announcements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="filters">
+                        <ul class="schedule-filter">
+                            <li class="active" data-tsfilter="monday">Monday</li>
+                            <li data-tsfilter="tuesday">Tuesday</li>
+                            <li data-tsfilter="wednesday">Wednesday</li>
+                            <li data-tsfilter="thursday">Thursday</li>
+                            <li data-tsfilter="friday">Friday</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="schedule-table filtering">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="day-time">Fitness Class</td>
+                                    <td class="monday ts-item show" data-tsmeta="monday">10:00AM - 11:30AM</td>
+                                    <td class="tuesday ts-item" data-tsmeta="tuesday">2:00PM - 3:30PM</td>
+                                    <td>Nhlakanipho Mahlalela</td>
+                                </tr>
+                                <tr>
+                                    <td class="day-time">Muscle Training</td>
+                                    <td class="friday ts-item" data-tsmeta="friday">10:00AM - 11:30AM</td>
+                                    <td class="thursday friday ts-item" data-tsmeta="thursday" data-tsmeta="friday">2:00PM - 3:30PM</td>
+                                    <td>Nhlakanipho Mahlalela</td>
+                                </tr>
+                                <tr>
+                                    <td class="day-time">Torso Training</td>
+                                    <td class="tuesday ts-item" data-tsmeta="tuesday">10:00AM - 11:30AM</td>
+                                    <td class="monday ts-item show" data-tsmeta="monday">2:00PM - 3:30PM</td>
+                                    <td>Nhlakanipho Mahlalela</td>
+                                </tr>
+                                <tr>
+                                    <td class="day-time">Yoga Training Class</td>
+                                    <td class="wednesday ts-item" data-tsmeta="wednesday">10:00AM - 11:30AM</td>
+                                    <td class="friday ts-item" data-tsmeta="friday">2:00PM - 3:30PM</td>
+                                    <td>Nhlakanipho Mahlalela</td>
+                                </tr>
+                                <tr>
+                                    <td class="day-time">Advanced Training</td>
+                                    <td class="thursday ts-item" data-tsmeta="thursday">10:00AM - 11:30AM</td>
+                                    <td class="wednesday ts-item" data-tsmeta="wednesday">2:00PM - 3:30PM</td>
+                                    <td>Nhlakanipho Mahlalela</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** Testimonials Starts ***** -->
+    <section class="section" id="trainers">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Expert <em>Trainers</em></h2>
+                        <img src="assets/images/line-dec.png" alt="">
+                        <p>These are the pillars of NTM Fitness Club</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="assets/images/first-trainer.jpg" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Strength Trainer</span>
+                            <h4>Nhlakanipho Mahlalela</h4>
+                            <p>A self-motivated individual who is overly enthusiastic and obsessed with every aspact of fitness. Wakes up early every morning with the mindset of improvement.</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="assets/images/first-trainer.jpg" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Stamina Trainer</span>
+                            <h4>Nhlakanipho Mahlalela</h4>
+                            <p>A self-motivated individual who is overly enthusiastic and obsessed with every aspact of fitness. Wakes up early every morning with the mindset of improvement.</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="assets/images/first-trainer.jpg" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>Exercise Co-ordinator</span>
+                            <h4>Nhlakanipho Mahlalela</h4>
+                            <p>A self-motivated individual who is overly enthusiastic and obsessed with every aspact of fitness. Wakes up early every morning with the mindset of improvement.</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Testimonials Ends ***** -->
+    
+    <!-- ***** Contact Us Area Starts ***** -->
+    <section class="section" id="contact-us">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div id="map">
+                      <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="contact-form">
+                        <form id="contact" action="" method="post">
+                          <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <input name="name" type="text" id="name" placeholder="Your Name*" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email*" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                              <fieldset>
+                                <input name="subject" type="text" id="subject" placeholder="Subject">
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us Area Ends ***** -->
+{% endblock main_content %}
