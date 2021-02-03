@@ -29,8 +29,8 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 #DEBUG = False
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'ntmfitness.herokuapp.com'
+    'ntmfitness.herokuapp.com',
+    '127.0.0.1'
 ]
 
 
@@ -87,12 +87,12 @@ WSGI_APPLICATION = 'ntm.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 # Password validation
