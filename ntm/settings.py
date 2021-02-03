@@ -130,14 +130,6 @@ USE_TZ = True
 AUTH_USER_MODEL = 'accounts.Member'
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, 'static'),
-
-]
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -145,6 +137,12 @@ STATIC_URL = '/static/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # LOGIN
 LOGIN_REDIRECT_URL = 'blog:blog_list'
 LOGOUT_REDIRECT_URL = 'blog:blog_list'
